@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 public class Wrestler implements Serializable {
 
+    private int id;
     private String name;
     private char gender;
     private String maneuver;
@@ -17,11 +18,20 @@ public class Wrestler implements Serializable {
 
     public Wrestler(){}
 
-    public Wrestler(String name, char gender, String maneuver, int championships) {
+    public Wrestler(int id, String name, char gender, String maneuver, int championships) {
+        this.id = id;
         this.name = name;
         this.gender = gender;
         this.maneuver = maneuver;
         this.championships = championships;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
